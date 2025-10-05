@@ -63,6 +63,21 @@ func main() {
 			fmt.Println(string(body))
 			break
 
+		case "rtype":
+			if len(commands) < 2 {
+				fmt.Printf("[WARNING] Not enough arguments: given %d, needed %d\n", len(commands), 2)
+				break
+			}
+
+			switch commands[1] {
+			case "https":
+				RType = HTTPS
+				break
+			case "http":
+				RType = HTTP
+				break
+			}
+
 		default:
 			break
 		}
