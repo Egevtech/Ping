@@ -1,0 +1,8 @@
+--- PING ---
+
+1. Clone this repo
+2. Do 'go build'
+3. Run ./tcpping
+
+--- IF YOU WANT TO INSTALL THIS ---
+1. After steps 1, 2 run 'go install' (read https://go.dev/doc/tutorial/compile-install for more information)
