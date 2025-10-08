@@ -26,7 +26,8 @@ func main() {
 	RType = HTTP
 
 	fmt.Printf("|rtype <type>| where type=={https, http} - select response type\n" +
-		"|connect <addr>| - set address, (for ex. 'connect localhost:8080')\n")
+		"|connect <addr>| - set address, (for ex. 'connect localhost:8080')\n" +
+		"|fget <addr>| - send GET request to <addr>\n")
 
 	for {
 		fmt.Printf("<%s://%s/> ?", RType, addr)
