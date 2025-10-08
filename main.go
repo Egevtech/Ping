@@ -59,7 +59,35 @@ func main() {
 			body, err := io.ReadAll(resp.Body)
 			if err != nil {
 				fmt.Printf("[NF] Error occured while reading answer: %s\n", err)
+				break
 			}
+			fmt.Println(string(body))
+			break
+
+		case "fget":
+			if len(commands) < 2 {
+				fmt.Printf("[WARNING] Not enough arguments: given %d, needed %d\n", len(commands), 3)
+				break
+			}
+
+			t_addr := commands[1]
+
+			fmt.Printf("Sending GET request to %s\n", t_addr)
+
+			resp, err := http.Get(fmt.Sprintf("%s://%s/", RType, t_addr))
+			if err != nil {
+				fmt.Printf("[NF] Error occured: %s\n", err)
+				break
+			}
+
+			defer resp.Body.Close()
+
+			body, err := io.ReadAll(resp.Body)
+			if err != nil {
+				fmt.Printf("[NF] Error occured while reading answer: %s\n", err)
+				break
+			}
+
 			fmt.Println(string(body))
 			break
 
