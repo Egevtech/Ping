@@ -27,7 +27,9 @@ func main() {
 
 	help := "|rtype <type>| where type=={https, http} - select response type\n" +
 		"|connect <addr>| - set address, (for ex. 'connect localhost:8080')\n" +
-		"|fget <addr>| - send GET request to <addr>\n"
+		"|fget <addr>| - send GET request to <addr>\n" +
+		"|get| - send GET request\n" +
+		"|exit| - exit program\n"
 
 	fmt.Print(help)
 
