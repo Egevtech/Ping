@@ -1,4 +1,4 @@
-module tcpping
+module ping
 
 go 1.25
 
