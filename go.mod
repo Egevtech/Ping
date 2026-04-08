@@ -1,4 +1,4 @@
-module ping
+module github.com/egevtech/ping/v2
 
 go 1.25
 
