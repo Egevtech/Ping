@@ -22,7 +22,7 @@ jobs:
 
       - name: Resolve dependencies
         run: |
-          go get go-arg
+          go get github.com/alexflint/go-arg
 
       - name: Build
         run: go build -v ./...
